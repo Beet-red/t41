@@ -2,6 +2,7 @@
 const express = require('express');
 const { Pool } = require('pg');
 require('dotenv').config(); // Load .env file
+const cors = require('cors');
 
 // --- App & DB Initialization ---
 const app = express();
@@ -17,6 +18,7 @@ const pool = new Pool({
 });
 
 // --- Middleware ---
+app.use(cors());
 app.use(express.json()); // Middleware to parse JSON bodies
 
 // --- API Endpoints ---
