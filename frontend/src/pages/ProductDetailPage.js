@@ -16,7 +16,7 @@ function ProductDetailPage() {
   const location = useLocation();
   
   // 3. GET THE fromPage VALUE WE PASSED (default to 1)
-  const fromPage = location.state?.fromPage || 1;   
+  const fromPath = location.state?.from || '/';   
 
   useEffect(() => {
     const fetchProduct = async () => {
@@ -54,8 +54,8 @@ function ProductDetailPage() {
   // --- Display Product Details ---
   return (
     <div className="product-detail-container">
-      <Link to={`/?page=${fromPage}`} className="btn-back">
-        &larr; Back to Products
+      <Link to={fromPath} className="btn-back">
+        &larr; Back
       </Link>
       <div className="product-detail-content">
         <img 

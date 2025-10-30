@@ -218,3 +218,55 @@ a {
   background-color: #c0c0c0;
   cursor: not-allowed;
 }
+
+.department-nav {
+  padding: 15px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px 15px;
+  margin-bottom: 20px;
+}
+
+.department-nav strong {
+  margin-right: 10px;
+}
+
+.department-nav a {
+  padding: 8px 12px;
+  border-radius: 5px;
+  color: #007bff;
+  font-weight: 500;
+  text-decoration: none;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.department-nav a:hover {
+  background-color: #f0f0f0;
+}
+
+.department-nav a.active {
+  background-color: #007bff;
+  color: #fff;
+}
+
+/* --- Department Page Header --- */
+.department-header {
+  padding-bottom: 15px;
+  border-bottom: 2px solid #e0e0e0;
+  margin-bottom: 20px;
+}
+
+.department-header h2 {
+  margin: 0 0 5px 0;
+  font-size: 2rem;
+}
+
+.department-header p {
+  margin: 0;
+  font-size: 1.1rem;
+  color: #555;
+}

@@ -3,6 +3,7 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import ProductListPage from './pages/ProductListPage';
 import ProductDetailPage from './pages/ProductDetailPage';
+import DepartmentPage from './pages/DepartmentPage';
 import './App.css';
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
             
             {/* Route for the Product Detail Page */}
             <Route path="/products/:id" element={<ProductDetailPage />} />
+            <Route path="/departments/:id" element={<DepartmentPage />} />
           </Routes>
         </main>
         <footer className="app-footer">

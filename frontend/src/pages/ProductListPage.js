@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Link, useSearchParams } from 'react-router-dom';
+import DepartmentList from '../components/DepartmentList';
 
 // We fetch data from our backend API
 const API_URL = 'http://localhost:4000/api/products';
@@ -52,7 +53,9 @@ function ProductListPage() {
   // --- Display Product List ---
   return (
     <div className="product-list-container">
-      <h2>Products</h2>
+      <DepartmentList />
+
+      <h2 style={{ marginTop: '20px' }}>All Products</h2>
 
       {/* Show loading text only when loading */}
       {loading && <div className="loading">Loading products...</div>}
@@ -62,11 +65,11 @@ function ProductListPage() {
         <div className="product-grid">
           {products.map((product) => (
             <div key={product.id} className="product-card">
-              <img 
+              {/* <img 
                 src={`https://via.placeholder.com/150?text=${product.name.replace(/\s/g, '+')}`} 
                 alt={product.name} 
                 className="product-image"
-              />
+              /> */}
               <h3 className="product-name">{product.name}</h3>
               <p className="product-brand">{product.brand}</p>
               <p className="product-price">${Number(product.retail_price).toFixed(2)}</p>
